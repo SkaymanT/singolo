@@ -31,13 +31,21 @@ header{
   color: #f06c64;
 }
 
-nav{
+nav {
   float: right;   
 }
 
 nav li{ 
   display: inline-block;
   padding: 20px 30px;  
+}
+nav li::before{ 
+  content: '•';
+}
+
+nav li:first-child{
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
 nav li a{
