@@ -1,6 +1,6 @@
 body{
   padding: 0;
-  margin: 1;
+  margin: 0;
 }
 
 .container {
@@ -22,12 +22,12 @@ header{
   font-size: 25pt;
   font-weight: bold;
   font-stretch: normal;
-  text-transform: uppercase;
-  
+  text-transform: uppercase;  
   color: #fff;
 }
 
-.logo span{
+.logo::after{ 
+  content: '*';
   color: #f06c64;
 }
 
@@ -37,26 +37,45 @@ nav {
 
 nav li{ 
   display: inline-block;
-  padding: 20px 30px;  
+  padding: 20px 0px;
+  border: 0; 
+  margin: 0; 
 }
 nav li::before{ 
   content: '•';
+  color: #494e62;
+  padding-right: 13px;
+  padding-left: 13px;
 }
 
-nav li:first-child{
-  padding-left: 0;
-  margin-bottom: 0;
+nav li:first-child::before{
+  display: none;
+  
 }
 
 nav li a{
-  padding: 0px 0px;
   font-weight: bold;
   font-family: Lato, sans-serif;
-  font-size: 12pt;
+  font-size: 9pt;
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
 }
 nav li a:hover{
   color: #f06c64;
+}
+
+main{
+  background-color:#f06c64;
+  height: 890px;
+}
+
+.slider{
+  width: 100%;/*ширина объекта*/
+}
+
+.slider-img{
+  float: left;/*расположение объекта на странице*/
+  width: 50%;/*ширина объекта*/
+  padding: 0 0;
 }
