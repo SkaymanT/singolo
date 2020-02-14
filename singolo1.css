@@ -67,15 +67,26 @@ nav li a:hover{
 
 main{
   background-color:#f06c64;
-  height: 890px;
+  height: 600px;
+  border-bottom: solid 6px #ea676b;
 }
 
-.slider{
-  width: 100%;/*ширина объекта*/
+.slider_img{
+  display: flex;
 }
 
-.slider-img{
-  float: left;/*расположение объекта на странице*/
-  width: 50%;/*ширина объекта*/
-  padding: 0 0;
+.slider-img1{ 
+  padding: 53px 0 0 72px;
+}
+
+.slider-img2{
+  padding: 174px 0 0 73px;
+}
+
+.prev {
+ 
+}
+
+.next {
+  
 }
