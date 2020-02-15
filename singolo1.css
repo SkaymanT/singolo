@@ -17,14 +17,16 @@ header{
 
 .logo h1{
   float: left;
-  padding: 5px 40px;/*внутрений отступ*/
-  font-family: Lato, Catamaran, sans-serif;
-  font-size: 25pt;
-  font-weight: bold;
-  font-stretch: normal;
+  padding: 14px 37px;
+  font-family: Lato, sans-serif;
+  font-size: 19pt;
+  font-weight: 500;
+  letter-spacing: -1.1px; 
+  font-stretch: inherit; 
   text-transform: uppercase;  
   color: #fff;
 }
+
 
 .logo h1::after{ 
   content: '*';
@@ -32,29 +34,37 @@ header{
 }
 
 nav {
-  float: right;   
+  float: right;  
+  padding: 0px 0px; 
+}
+.navigation{
+  float: left; 
+  padding: 0px 40px; 
 }
 
 nav li{ 
   display: inline-block;
-  padding: 20px 0px;
+  padding: 24px 0px;
+  letter-spacing: -0.40px; 
   border: 0; 
   margin: 0; 
 }
 nav li::before{ 
   content: '•';
+  font-size: 9px;
   color: #494e62;
-  padding-right: 13px;
-  padding-left: 13px;
+  padding-right: 12.3px;
+  padding-left: 11.7px;
 }
 
 nav li:first-child::before{
   display: none;
-  
+  padding: 0px 0px;
+
 }
 
 nav li a{
-  font-weight: bold;
+  font-weight: 400;
   font-family: Lato, sans-serif;
   font-size: 9pt;
   text-transform: uppercase;
@@ -99,3 +109,18 @@ main{
   right: 42px;
   cursor: pointer;
 }
+
+.services__discription{
+  padding:  33px 39px;
+  font-family: Lato, sans-serif;
+}
+.services__discription h2{
+  font-size: 24pt;
+  letter-spacing: -2.10px; 
+  color:#666d89;
+}
+.services__discription p{
+  font-size: 12pt;
+  line-height: 2;
+}
+
