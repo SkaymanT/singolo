@@ -1,3 +1,4 @@
+
 body{
   padding: 0;
   margin: 0;
@@ -17,20 +18,24 @@ header{
 
 .logo h1{
   float: left;
-  padding: 14px 37px;
-  font-family: Lato, sans-serif;
+  padding: 15px 37px;
+  font-family: 'LatoWebSemibold', sans-serif;
   font-size: 19pt;
-  font-weight: 500;
-  letter-spacing: -1.1px; 
-  font-stretch: inherit; 
+  letter-spacing: -0.5px; 
   text-transform: uppercase;  
   color: #fff;
 }
 
 
 .logo h1::after{ 
-  content: '*';
+  content: '*'; 
   color: #f06c64;
+}
+
+.logo h1:hover{
+  color: #f06c64;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 nav {
@@ -42,19 +47,19 @@ nav {
   padding: 0px 40px; 
 }
 
-nav li{ 
+.navigation li{ 
   display: inline-block;
   padding: 24px 0px;
-  letter-spacing: -0.40px; 
+  letter-spacing: -0.1; 
   border: 0; 
   margin: 0; 
 }
 nav li::before{ 
   content: '•';
-  font-size: 9px;
+  font-size: 10px;
   color: #494e62;
-  padding-right: 12.3px;
-  padding-left: 11.7px;
+  padding-right: 13.5px;
+  padding-left: 8px; 
 }
 
 nav li:first-child::before{
@@ -65,7 +70,7 @@ nav li:first-child::before{
 
 nav li a{
   font-weight: 400;
-  font-family: Lato, sans-serif;
+  font-family: 'LatoWebSemibold', sans-serif;
   font-size: 9pt;
   text-transform: uppercase;
   text-decoration: none;
@@ -73,6 +78,8 @@ nav li a{
 }
 nav li a:hover{
   color: #f06c64;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 main{
@@ -110,17 +117,70 @@ main{
   cursor: pointer;
 }
 
+.services{
+  background-color: #f2f2f2;
+  border-bottom: 6px solid #ffffff;
+}
+
 .services__discription{
-  padding:  33px 39px;
-  font-family: Lato, sans-serif;
+  padding:  37px 40px 0px 40px;
 }
 .services__discription h2{
-  font-size: 24pt;
-  letter-spacing: -2.10px; 
+  font-family: 'LatoWebBlack', sans-serif;
+  font-size: 22.5pt;
+  letter-spacing: -0.2px; 
   color:#666d89;
+  margin-bottom: 0; 
 }
 .services__discription p{
-  font-size: 12pt;
-  line-height: 2;
+  font-family: 'LatoWebLight', sans-serif;
+  font-size: 13pt;
+  letter-spacing: 0.22px; 
+  line-height: 1.8;
+  color:#767e9e;
+  margin-top: 15px;
 }
+.services__blocks{
+  position: relative;
+  display: inline-flex;
+  flex-wrap:  wrap; 
+  padding-left: 30px;
+}
+
+.services__block{
+  position: relative;
+  width: 33%;
+  margin: 1.4px -6.8px 0px 0px;
+  display: flex;
+  overflow: hidden;
+}
+
+.services__block__icon{
+  position: relative;
+  margin: 25px 10px 0px 10px;
+}
+
+.services__block__text{
+  margin: 5px 0px 0px 10px;
+  font-family: "LatoWeb", sans-serif;
+  font-size: 11pt;
+  letter-spacing: 1.0 px;
+  max-width: 220px;
+  color:#666d89; 
+}
+
+.services__block__text h3{
+  margin-bottom: 0px;
+}
+.services__block__text p{
+  margin-top: 10px;
+  font-size: 9pt;
+  color: #767e9e;
+  line-height: 21px;
+  text-align: justify;
+}
+
+
+
+
 
