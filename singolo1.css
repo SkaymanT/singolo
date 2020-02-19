@@ -1,4 +1,3 @@
-
 body{
   padding: 0;
   margin: 0;
@@ -92,10 +91,12 @@ main{
 }
 
 .slider__images{
-  display: flex;
+  display: inline-flex;
 }
 
 .slider__images__image1{ 
+  margin: 0;
+  float: left;
   padding: 53px 0 0 110px;
 }
 
