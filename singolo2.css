@@ -28,11 +28,38 @@
   font-size: 23pt;
   letter-spacing: 0.04px;
 }
-.portfolio__discription p{
+
+.portfolio__discription p {
   padding-top: 20px;
   font-family: 'LatoWeb', sans-serif;
   font-size: 13.5pt;
   letter-spacing: -0.35px;
+}
+
+.portofolio__tags {
+  margin-top: 15px;
+  margin-bottom: 18px;
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 10px;
+}
+
+.tag {
+  border-radius: 5px;
+  border: 1px solid #6e7593;
+  padding: 3px 6px 3px 6px;
+  font-family: 'LatoWeb', sans-serif;
+  font-size: 9pt;
+  
+}
+.tag:first-child{
+  letter-spacing: 0.35px;
+}
+
+.tag:hover{
+  border: 1px solid #f1f1f3;
+  cursor: pointer;
+  color: #f1f1f3;
 }
 
 .layout-4-column {
@@ -62,9 +89,6 @@
   grid-column-gap: 20px;
   padding-left: 40px;
   padding-right: 40px;
-} 
-
-.employer {
-
 }
 
+.employer {}
