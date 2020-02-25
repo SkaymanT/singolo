@@ -30,15 +30,15 @@
 }
 
 .portfolio__discription p {
-  padding-top: 20px;
+  padding-top: 21px;
   font-family: 'LatoWeb', sans-serif;
   font-size: 13.5pt;
   letter-spacing: -0.35px;
 }
 
 .portofolio__tags {
-  margin-top: 15px;
-  margin-bottom: 18px;
+  margin-top: 13px;
+  margin-bottom: 19px;
   display: inline-grid;
   grid-template-columns: auto auto auto auto;
   grid-column-gap: 10px;
@@ -54,6 +54,7 @@
 }
 .tag:first-child{
   letter-spacing: 0.35px;
+  padding: 3px 6px 3px 7px;
 }
 
 .tag:hover{
