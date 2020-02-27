@@ -131,9 +131,10 @@ form textarea {
 }
 
 .ico-mail img{
-  width: 11px;
-  height: 11px;
-  padding-left: 2px;
+  width: 13px;
+  height: 13px;
+  padding-top: 2px;
+  padding-left: 1px;
   padding-right: 9px;
 }
 
