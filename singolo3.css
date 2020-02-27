@@ -10,13 +10,84 @@
 
 .get-a-quota{
   max-height: 648px;
+  padding-left: 40px;
+  padding-right: 40px;
   width: 100%;
   background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
 }
 
+.get-a-quota h5{
+  padding-top: 60px;
+  font-family: 'LatoWebBlack', sans-serif;
+  color: #f0d8d9;
+  font-size: 23pt;
+  letter-spacing: -0.35px;
+}
+
+.get-a-quota p{
+  padding-top: 20px;
+  font-family: 'LatoWebLight', sans-serif;
+  color: #f0d8d9;
+  font-size: 14pt;
+  letter-spacing: -0.35px;
+  line-height: 1.7;
+}
+
+
 footer{
-  max-height: 76px;
+  height: 76px;
   width: 100%;
   background-color: #2d303a;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.social {
+  display: inline-flex;
+  justify-content: space-between; 
+}
+
+.social__facebook img {
+  margin-left: 0.4px;
+  margin-right: 7.0px;
+  width: 14px;
+  height: 14px;
+  border-radius: 100px;
+  border: 1.2px solid #666d89;
+  padding: 8px 8px 8px 8px;
+
+}
+
+.social__google-plus img {
+  margin-left: 0.4px;
+  margin-right: 7.5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 100px;
+  border: 1.2px solid #666d89;
+  padding: 6px;
+
+}
+
+.social__twitter img {
+  margin-left: 0.4px;
+  margin-right: 7.0px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  border: 1.2px solid #666d89;
+  padding: 6.6px;
+}
+
+.social__linkedIn img {
+  margin-left: 0.4px;
+  margin-right: 4.0px;
+  width: 34px;
+  height: 34px;
+}
+
+
+.social img:hover {
+  cursor: pointer;
 }

@@ -16,19 +16,19 @@
   border-bottom: 6px solid #323746;
 }
 
-.portfolio__discription {
+.portfolio__description {
   padding-left: 40px;
   padding-right: 40px;
 }
 
-.portfolio__discription h3 {
+.portfolio__description h3 {
   padding-top: 62px;
   font-family: 'LatoWebBlack', sans-serif;
   font-size: 23pt;
   letter-spacing: 0.04px;
 }
 
-.portfolio__discription p {
+.portfolio__description p {
   padding-top: 21px;
   font-family: 'LatoWeb', sans-serif;
   font-size: 13.5pt;
@@ -95,13 +95,13 @@
   letter-spacing: -0.35px;
 }
 
-.about-us__discription {
-  padding: 0px 40px 45px 40px;
+.about-us__description {
+  padding: 0px 40px 41px 40px;
   font-family: 'LatoWebLight', sans-serif;
   color: #666d89;
   font-size: 13.5pt;
   letter-spacing: -0.05px;
-  line-height: 1.65;
+  line-height: 1.725;
 }
 
 .layout-3-column {
