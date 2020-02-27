@@ -107,20 +107,43 @@ form textarea {
 }
 
 .contact {
-  padding-top: 27px;
-}
-
-.ico img{
-  width: 10px;
-  height: 10px;
-  padding-right: 10px;
+  padding-top: 20px;
 }
 
 .contact p {
+  padding-top: 7px;
+}
+
+
+
+.ico-map img{
+  width: 10px;
+  height: 10px;
+  padding-left: 2px;
+  padding-right: 9px;
+}
+
+.ico-phone img{
+  width: 11px;
+  height: 11px;
+  padding-left: 2px;
+  padding-right: 10px;
+}
+
+.ico-mail img{
+  width: 11px;
+  height: 11px;
+  padding-left: 2px;
+  padding-right: 9px;
+}
+
+
+
+.contact p {
   font-family: 'LatoWebLight', sans-serif;
-  font-size: 8pt;
+  font-size: 8.5pt;
   text-align: justify;
-  letter-spacing: .35px;
+  letter-spacing: 0.35px;
 }
 
 .contact a {
