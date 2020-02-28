@@ -54,7 +54,7 @@
 form {
   margin-top: 1px;
   display: grid;
-  grid-template-rows: 38px 38px 38px 200px;
+  grid-template-rows: 38px 38px 38px 202px;
   grid-row-gap: 16px;
 
 }
@@ -156,8 +156,6 @@ form textarea {
   letter-spacing: 0.35px;
 }
 
-
-
 .contact p {
   font-family: 'LatoWebLight', sans-serif;
   font-size: 8.5pt;
@@ -187,16 +185,19 @@ footer {
 }
 
 .footer_content p{
-  padding-top: 35px;
+  padding-top: 32px;
   float: left;
-  font-size: 10px;
-  color: #f0d8d9;
+  font-size: 8.8pt;
+  font-family: 'LatoWeb', sans-serif;
+  color: #666d89;
 }
 
 .social {
   display: inline-flex;
   float: right;
-  justify-content: space-between;
+  margin-top: 22px;
+  margin-right: 76px;
+  /* justify-content: space-between; */
 }
 
 .social__facebook img {
