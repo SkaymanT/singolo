@@ -87,7 +87,22 @@ form textarea {
   font-size: 9pt;
 }
 
-.get-a-quota__content {}
+.get-a-quota__form button {
+  font-family: 'LatoWeb', sans-serif;
+  border: 1px solid #f0d8d9;
+  background-color: #f0d8d9;
+  border-radius: 5px;
+  color: #d6564f;
+  width: 150px;
+  height: 37px;
+}
+.get-a-quota__form button:hover {
+  cursor: pointer;
+
+}
+
+
+
 
 .get-a-quota__content h5 {
   font-family: 'LatoWebBlack', sans-serif;
