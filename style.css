@@ -166,7 +166,7 @@ main {
 .services__block {
   position: relative;
   width: 33%;
-  margin: 35px -6.8px -5px 0px;
+  margin: 35px -7.8px -6px 1px;
   display: flex;
   overflow: hidden;
 }
