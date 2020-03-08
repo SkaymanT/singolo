@@ -1,77 +1,79 @@
-*{
+* {
   padding: 0;
   margin: 0;
-} 
+}
 
-body{
+body {
   padding: 0;
   margin: 0;
 }
 
 .container {
-	max-width: 1020px;
-  margin: 0 auto; 
+  max-width: 1020px;
+  margin: 0 auto;
 }
 
-header{
+header {
   background-color: #2d303a;
-  width: 100%; 
+  width: 100%;
   height: 89px;
   border-bottom: 6px solid #323746;
 }
 
-.logo h1{
+.logo h1 {
   float: left;
   padding: 33px 40px;
   font-family: 'LatoWebSemibold', sans-serif;
   font-size: 19pt;
-  letter-spacing: -0.5px; 
-  text-transform: uppercase;  
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
   color: #fff;
 }
 
 
-.logo h1::after{ 
-  content: '*'; 
+.logo h1::after {
+  content: '*';
   color: #f06c64;
 }
 
-.logo h1:hover{
+.logo h1:hover {
   color: #f06c64;
   cursor: pointer;
   text-decoration: underline;
 }
 
 nav {
-  float: right;  
-  padding: 15px 0px; 
-}
-.navigation{
-  float: left; 
-  padding: 1px 39px; 
+  float: right;
+  padding: 15px 0px;
 }
 
-.navigation li{ 
+.navigation {
+  float: left;
+  padding: 1px 39px;
+}
+
+.navigation li {
   display: inline-block;
   padding: 24px 0px;
-  border: 0; 
-  margin: 0; 
+  border: 0;
+  margin: 0;
 }
-nav li::before{ 
+
+nav li::before {
   content: '•';
   font-size: 10px;
   color: #494e62;
   padding-right: 13.5px;
-  padding-left: 8px; 
+  padding-left: 8px;
 }
 
-nav li:first-child::before{
+nav li:first-child::before {
   display: none;
   padding: 0px 0px;
 
 }
 
-nav li a{
+nav li a {
   font-weight: 400;
   font-family: 'LatoWebSemibold', sans-serif;
   font-size: 9pt;
@@ -79,32 +81,34 @@ nav li a{
   text-decoration: none;
   color: #fff;
 }
-nav li a:hover{
+
+nav li a:hover {
   color: #f06c64;
   cursor: pointer;
   text-decoration: underline;
 }
 
-main{
-  background-color:#f06c64;
+main {
+  background-color: #f06c64;
   height: 594px;
   border-bottom: solid 6px #ea676b;
 }
-.slider{
+
+.slider {
   position: relative;
 }
 
-.slider__images{
+.slider__images {
   display: inline-flex;
 }
 
-.slider__images__image1{ 
+.slider__images__image1 {
   margin: 0;
   float: left;
   padding: 50px 0 0 112px;
 }
 
-.slider__images__image2{
+.slider__images__image2 {
   padding: 171px 0 0 73px;
 }
 
@@ -122,71 +126,82 @@ main{
   cursor: pointer;
 }
 
-.services{
+.services {
   background-color: #f2f2f2;
   height: 494px;
   border-bottom: 6px solid #ffffff;
 }
 
-.services__discription{
-  padding:  62px 40px 0px 40px;
+.services__description {
+  padding: 62px 40px 0px 40px;  
 }
-.services__discription h2{
+
+.services__description h2 {
   font-family: 'LatoWebBlack', sans-serif;
   font-size: 22.5pt;
-  letter-spacing: 0.2px; 
-  color:#666d89;
-  margin-bottom: 0; 
+  letter-spacing: 0.2px;
+  color: #666d89;
+  margin-bottom: 0;
 }
-.services__discription p{
+
+.services__description p {
   font-family: 'LatoWebLight', sans-serif;
   font-size: 13pt;
-  letter-spacing: 0.22px; 
+  letter-spacing: 0.22px;
   line-height: 1.8;
-  color:#767e9e;
+  color: #767e9e;
+  text-align: justify;
   margin-top: 15px;
+  overflow: hidden;
+  max-height: 64px;
 }
-.services__blocks{
+
+.services__blocks {
   position: relative;
   display: inline-flex;
-  flex-wrap:  wrap; 
+  flex-wrap: wrap;
   padding-left: 30px;
 }
 
-.services__block{
+.services__block {
   position: relative;
   width: 33%;
-  margin: 33px -6.8px -5px 0px;
+  margin: 35px -6.8px -5px 0px;
   display: flex;
   overflow: hidden;
 }
 
-.services__block__icon{
+.services__block__icon {
   position: relative;
   margin: 10px 10px 0px 10px;
 }
 
-.services__block__text{
+.services__block__text {
   margin: 6px 0px -2.2px 10px;
   max-width: 220px;
-  color:#666d89; 
+  color: #666d89;
+  overflow: hidden;
+  max-height: 90px;
 }
 
-.services__block__text h3{
+.services__block__text h3 {
   font-family: "LatoWebBlack", sans-serif;
   margin-bottom: -0.2px;
   font-size: 14pt;
   letter-spacing: -0.4px;
 }
-.services__block__text p{
+
+.services__block__text p {
   margin-top: 8px;
   font-family: "LatoWebSemibold", sans-serif;
   font-size: 9pt;
   color: #767e9e;
   line-height: 21px;
   text-align: justify;
+  overflow: hidden;
 }
-.services__block__text_transfer{
+
+.services__block__text_transfer {
   letter-spacing: -0.1px;
 }
 
@@ -216,6 +231,7 @@ main{
   font-family: 'LatoWeb', sans-serif;
   font-size: 13.5pt;
   letter-spacing: -0.35px;
+  text-align: justify;
 }
 
 .portofolio__tags {
@@ -311,7 +327,7 @@ main{
   font-size: 14pt;
   color: #666d89;
   letter-spacing: -0.35px;
-  white-space: nowrap; 
+  white-space: nowrap;
   overflow: hidden;
   text-align: justify;
 }
@@ -411,6 +427,7 @@ main{
   font-size: 13.5pt;
   letter-spacing: -0.1px;
   line-height: 1.7;
+  text-align: justify;
 }
 
 .layout-2-column {
@@ -472,6 +489,7 @@ form textarea {
   width: 150px;
   height: 37px;
 }
+
 .get-a-quota__form button:hover {
   cursor: pointer;
 
@@ -498,19 +516,19 @@ form textarea {
   padding-top: 20px;
 }
 
-.contact p{
+.contact p {
   padding-top: 7px;
 }
 
 
-.ico-map img{
+.ico-map img {
   width: 11px;
   height: 11px;
   padding-left: 2px;
   padding-right: 8px;
 }
 
-.ico-phone img{
+.ico-phone img {
   width: 11px;
   height: 11px;
   padding-left: 2px;
@@ -518,7 +536,7 @@ form textarea {
   padding-right: 8px;
 }
 
-.ico-mail img{
+.ico-mail img {
   width: 13px;
   height: 13px;
   margin-top: 1px;
@@ -526,19 +544,19 @@ form textarea {
   padding-right: 7px;
 }
 
-.ico-map span{
+.ico-map span {
   position: relative;
   top: -1px;
   letter-spacing: 0.15px;
 }
 
-.ico-phone span{
+.ico-phone span {
   position: relative;
   top: -1.5px;
   letter-spacing: 0.15px;
 }
 
-.ico-mail span{
+.ico-mail span {
   position: relative;
   top: -4px;
   letter-spacing: 0.35px;
@@ -564,7 +582,7 @@ footer {
   background-color: #2d303a;
 }
 
-.footer_content{
+.footer_content {
   width: 100%;
   height: 76px;
   padding-left: 40px;
@@ -573,18 +591,19 @@ footer {
   justify-content: space-between;
 }
 
-.footer_content p{
+.footer_content p {
   padding-top: 31px;
   float: left;
   font-size: 8.8pt;
   font-family: 'LatoWeb', sans-serif;
   color: #666d89;
+  text-align: justify;
 }
 
-.footer_content p span{
-   font-size: 12px;
-   color: #474c5f;
-   bottom: 20px;
+.footer_content p span {
+  font-size: 12px;
+  color: #474c5f;
+  bottom: 20px;
 }
 
 .footer__social {
@@ -637,8 +656,3 @@ footer {
 .social img:hover {
   cursor: pointer;
 }
-
-
-
-
-
