@@ -1,2 +1,4 @@
 let counter = 0;
-const MENU = document.getElementById('menu');
+const NAVIGATION = document.getElementById('navigation');
+
+NAVIGATION.querySelectorAll('li');
