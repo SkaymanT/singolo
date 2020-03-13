@@ -73,6 +73,10 @@ nav li:first-child::before {
 
 }
 
+.Active{
+  color: #f06c64;
+}
+
 nav li a {
   font-weight: 400;
   font-family: 'LatoWebSemibold', sans-serif;
@@ -398,6 +402,8 @@ main {
 
 .social img:hover {
   cursor: pointer;
+  filter: alpha(Opacity=50);
+  opacity: 0.5; 
 }
 
 .get-a-quota {
@@ -492,7 +498,8 @@ form textarea {
 
 .get-a-quota__form button:hover {
   cursor: pointer;
-
+  filter: alpha(Opacity=50);
+  opacity: 0.5; 
 }
 
 .get-a-quota__content h5 {
@@ -652,6 +659,9 @@ footer {
   height: 34px;
 }
 
-.social img:hover {
+
+.footer__social img:hover {
   cursor: pointer;
+  filter: alpha(Opacity=50);
+  opacity: 0.5; 
 }
