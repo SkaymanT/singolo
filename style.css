@@ -73,7 +73,7 @@ nav li:first-child::before {
 
 }
 
-.Active{
+a.Active{
   color: #f06c64;
 }
 
