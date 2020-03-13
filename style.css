@@ -665,3 +665,41 @@ footer {
   filter: alpha(Opacity=50);
   opacity: 0.5; 
 }
+
+#message-block{
+  position: absolute;
+  width: 100vw;
+  height: 654px;
+  top: 2799px;
+  left: 0;
+  background-color: #0008;
+}
+
+#message-block.hidden{
+  display: none;
+}
+
+#message{
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  width: 20vw;
+  height: 80px;
+  text-align: center;
+  border: 2px solid black;
+  background-color: #f0d8d9;
+}
+/* 
+.slider__images{
+  display: none;
+}
+
+.active_slide,
+.next{
+  display: block;
+}
+.next{
+  position: absolute;
+  top:  0;
+  width: 100%;
+} */

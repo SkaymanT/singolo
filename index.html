@@ -33,12 +33,14 @@
   <main>
     <div class="container">
       <div class="slider">
-        <div class="slider__images">
-          <div class="slider__images__image1"><img src="assets/images/iPhone1.png" alt=""></div>
-          <div class="slider__images__image2"><img src="assets/images/iPhone2.png" alt=""></div>
-        </div>
-        <div class="slider__prev"><img src="assets/images/img1.png" alt=""></div>
-        <div class="slider__next"><img src="assets/images/img2.png" alt=""></div>
+        <div class="slide1">
+          <div class="slider__images">
+            <div class="slider__images__image1"><img src="assets/images/iPhone1.png" alt=""></div>
+            <div class="slider__images__image2"><img src="assets/images/iPhone2.png" alt=""></div>
+          </div>
+          <div class="slider__prev"><img src="assets/images/img1.png" alt=""></div>
+          <div class="slider__next"><img src="assets/images/img2.png" alt=""></div>
+        </div>  
       </div>
     </div>
   </main>
@@ -232,13 +234,23 @@
       </div>
       <div class="layout-2-column">
         <div class="get-a-quota__form">
-          <form action="URL" method="post">
-            <input type="text" name="name" placeholder="Name (Required)" autocomplete="off" pattern="[A-Za-z ]{1,32}" required>
-            <input type="email" name="email" placeholder="Email (Required)" required>
-            <input type="text" name="subject" placeholder="Subject">
-            <textarea name="Describe" placeholder="Describe your project in detail..." cols="40" rows="10"></textarea>
-            <button type="submit">Submit</button>
+          <form action="URL" method="post" id="Form">
+            <input type="text" name="name" id="name" placeholder="Name (Required)" autocomplete="off"
+              pattern="[A-Za-z ]{1,32}" required>
+            <input type="email" name="email" id="email" placeholder="Email (Required)" required>
+            <input type="text" name="subject" id="subject" placeholder="Subject">
+            <textarea name="describe" id="describe" placeholder="Describe your project in detail..." cols="40"
+              rows="10"></textarea>
+            <button type="submit" id="btn">Submit</button>
           </form>
+        </div>
+        <div id="message-block" class="hidden">
+          <div id="message">
+            <p>Text: <span id="result"></span></p>
+            <br>
+            <button id="close-btn">OK</button>
+
+          </div>
         </div>
         <div class="get-a-quota__content">
           <h5>Contact Information</h5>
