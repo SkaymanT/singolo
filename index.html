@@ -30,17 +30,60 @@
       </nav>
     </div>
   </header>
-  <main>
+  <main class="main">
     <div class="container">
       <div class="slider">
-        <div class="slide1">
+        <div class="slide active_slide">
           <div class="slider__images">
-            <div class="slider__images__image1"><img src="assets/images/iPhone1.png" alt=""></div>
-            <div class="slider__images__image2"><img src="assets/images/iPhone2.png" alt=""></div>
+            <div class="slider__images__image1">
+              <div class="IPhone_vertical">
+                <div class="IPhone_vertical_back">
+                  <img src="assets/images/IPhone vertical_back.png" alt="">
+                </div>
+                <div class="IPhone_vertical_btn">
+                  <img src="assets/images/button.png" alt="">
+                </div>
+                <div class="IPhone_vertical_screen">
+                  <img src="assets/images/screen_vertical.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="slider__images__image2">
+              <div class="IPhone_horizontal">
+                <div class="IPhone_horizontal_back">
+                  <img src="assets/images/IPhone horizontal_back.png" alt="">
+                </div>
+                <div class="IPhone_horizontal_btn">
+                  <img src="assets/images/button.png" alt="">
+                </div>
+                <div class="IPhone_horizontal_screen">
+                  <img src="assets/images/screen_horizontal.png" alt="">
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="slider__prev"><img src="assets/images/img1.png" alt=""></div>
-          <div class="slider__next"><img src="assets/images/img2.png" alt=""></div>
-        </div>  
+        </div>
+        <div class="slide">
+          <div class="slider__images">
+            <div class="slider__images__image3"><img src="assets/images/slider-content-prev.png" alt=""></div>
+            <div class="slider__images__image4">
+              <div class="IPhone_vertical">
+                <div class="IPhone_vertical_body">
+                  <img src="assets/images/Phone.png" alt="">
+                </div>
+                <div class="IPhone_vertical_display">
+                  <img src="assets/images/screen_vertical_slide2.png" alt="">
+                </div>
+                <div class="IPhone_vertical_shadow">
+                  <img src="assets/images/phone-vertical-shadow.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="slider__images__image5"><img src="assets/images/slider-content-next.png" alt=""></div>
+          </div>
+        </div>
+        <div class="slider__prev"><img src="assets/images/img1.png" alt=""></div>
+        <div class="slider__next"><img src="assets/images/img2.png" alt=""></div>
       </div>
     </div>
   </main>
@@ -120,26 +163,26 @@
       <div class="portfolio__description">
         <h3>Portfolio</h3>
         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-        <div class="portofolio__tags">
+        <div class="portofolio__tags" id="tag">
           <span class="tag selected">All</span>
           <span class="tag">Web Design</span>
           <span class="tag">Graphic Design</span>
           <span class="tag">Artwork</span>
         </div>
       </div>
-      <div class="layout-4-column">
-        <img src="assets/images/portfolio_img1.jpeg" alt="portofolio">
-        <img src="assets/images/portfolio_img2.jpeg" alt="portofolio">
-        <img src="assets/images/portfolio_img3.jpeg" alt="portofolio">
-        <img src="assets/images/portfolio_img4.jpeg" alt="portofolio">
-        <img src="assets/images/portfolio_img5.jpeg" alt="portofolio">
-        <img src="assets/images/portfolio_img6.jpeg" alt="portofolio">
-        <img src="assets/images/portfolio_img7.jpeg" alt="portofolio">
-        <img src="assets/images/portfolio_img8.jpeg" alt="portofolio">
-        <img src="assets/images/portfolio_img9.jpeg" alt="portofolio">
-        <img src="assets/images/portfolio_img10.jpeg" alt="portofolio">
-        <img src="assets/images/portfolio_img11.jpeg" alt="portofolio">
-        <img src="assets/images/portfolio_img12.jpeg" alt="portofolio">
+      <div class="layout-4-column" id="image">
+          <img class="portfolio_img" src="assets/images/portfolio_img1.jpeg" alt="portofolio">
+          <img class="portfolio_img" src="assets/images/portfolio_img2.jpeg" alt="portofolio">
+          <img class="portfolio_img" src="assets/images/portfolio_img3.jpeg" alt="portofolio">  
+          <img class="portfolio_img" src="assets/images/portfolio_img4.jpeg" alt="portofolio">
+          <img class="portfolio_img" src="assets/images/portfolio_img5.jpeg" alt="portofolio">
+          <img class="portfolio_img" src="assets/images/portfolio_img6.jpeg" alt="portofolio"> 
+          <img class="portfolio_img" src="assets/images/portfolio_img7.jpeg" alt="portofolio">
+          <img class="portfolio_img" src="assets/images/portfolio_img8.jpeg" alt="portofolio">
+          <img class="portfolio_img" src="assets/images/portfolio_img9.jpeg" alt="portofolio">
+          <img class="portfolio_img" src="assets/images/portfolio_img10.jpeg" alt="portofolio">
+          <img class="portfolio_img" src="assets/images/portfolio_img11.jpeg" alt="portofolio">
+          <img class="portfolio_img" src="assets/images/portfolio_img12.jpeg" alt="portofolio">
       </div>
     </div>
   </section>
@@ -241,12 +284,12 @@
             <input type="text" name="subject" id="subject" placeholder="Subject">
             <textarea name="describe" id="describe" placeholder="Describe your project in detail..." cols="40"
               rows="10"></textarea>
-            <button type="submit" id="btn">Submit</button>
+            <button type="button" id="btn">Submit</button>
           </form>
         </div>
         <div id="message-block" class="hidden">
           <div id="message">
-            <p>Text: <span id="result"></span></p>
+            <p>Письмо отправлено <span id="result"></span></p>
             <br>
             <button id="close-btn">OK</button>
 
