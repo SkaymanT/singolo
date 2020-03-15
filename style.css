@@ -14,6 +14,9 @@ body {
 }
 
 header {
+  position: sticky;
+  z-index: 100;
+  top: 0px;
   background-color: #2d303a;
   width: 100%;
   height: 89px;
