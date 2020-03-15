@@ -98,12 +98,6 @@ main {
   border-bottom: solid 6px #ea676b;
 }
 
-.slider {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
 .slider__images {
   display: inline-flex;
   height: 594px;
@@ -111,15 +105,17 @@ main {
 
 .slider__images__image1 {
   position: absolute;
-  top: 50px;
+  top: 53px;
   left: 112px;
   margin: 0;
 }
+.slider__images__image2 {
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  margin: 0;
+}
 
-/* .IPhone_vertical{
-  height: 458px;
-  width: 220px;
-} */
 
 .IPhone_vertical_back {
   position: absolute;
@@ -184,7 +180,7 @@ main {
 
 .slider__images__image3 {
   position: absolute;
-  top: 149px;
+  top: 152px;
   left: 252px;
   margin: 0px;
   height: 594px;
@@ -193,7 +189,7 @@ main {
 
 .slider__images__image4 {
   position: absolute;
-  top: 40px;
+  top: 43px;
   left: 383px;
   margin: 0px;
   z-index: 2;
@@ -225,24 +221,23 @@ main {
 
 .slider__images__image5 {
   position: absolute;
-  top: 149px;
+  top: 152px;
   left: 612px;
   margin: 0 auto;
   z-index: 1;
 }
 
-
 .slider__prev {
   position: absolute;
-  top: 278px;
-  left: 42px;
+  top: 376px;
+  left: 484px;
   cursor: pointer;
 }
 
 .slider__next {
   position: absolute;
-  top: 278px;
-  right: 40px;
+  top: 376px;
+  right: 481px;
   cursor: pointer;
 }
 
@@ -702,7 +697,6 @@ form textarea {
 
 }
 
-
 footer {
   height: 76px;
   width: 100%;
@@ -790,7 +784,6 @@ footer {
   position: relative;
   display: none;
   margin: 0 auto;
-  animation: 0.5s ease-in-out;
 }
 
 .active_slide,
@@ -814,43 +807,59 @@ footer {
   border-bottom: solid 6px #ea676b;
 }
 
-.to-left {
-  animation-name: left;
-}
 
-.from-right {
-  animation-name: right;
-}
-
-.to-right {
-  animation-name: right;
-  animation-direction: reverse;
-}
-
-.from-left {
-  animation-name: left;
-  animation-direction: reverse;
-}
-
-@keyframes left {
+@keyframes spincube_right {
   from {
-    left: 0;
-  }
-
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }		
   to {
-    left: -100%;
-  }
+      transform: rotateY(-90deg);
+  }		
+ 
 }
 
-@keyframes right {
+@keyframes spincube_left {
   from {
-    left: 100%;
-  }
-
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }		
   to {
-    left: 0;
-  }
+      transform: rotateY(90deg);
+  }		
+ 
 }
+
+.slider_right {
+  animation-name: spincube_right;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  transform-style: preserve-3d;
+  transform-origin: 510px 300px 0;
+}
+
+.slider_right .current {
+  transform: translateZ(510px);
+}
+
+.slider_right .next {
+  transform: rotateY(90deg) translateZ(510px);
+}
+
+.slider_left {
+  animation-name: spincube_left;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  transform-style: preserve-3d;
+  transform-origin: 510px 300px 0;
+}
+
+.slider_left .current {
+  transform: translateZ(510px);
+}
+
+.slider_left .next {
+  transform: rotateY(-90deg) translateZ(510px);
+}
+
 
 .portfolio_img{
   border: solid 5px transparent;

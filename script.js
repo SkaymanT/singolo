@@ -1,6 +1,8 @@
+//---------- Header --------------
 let counter = 0;
 const MENU = document.getElementById('menu');
 //--- Slider. Переключение слайдов-------------
+let slider = document.getElementById('slider');
 let slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 let isEnabled = true;
@@ -32,27 +34,28 @@ function changeCurrentSlide(n) { // функция изменяющая теку
   currentSlide = (n + slides.length) % slides.length;
 }
 
-function hideSlide(direction) { // функция скрытия текущего элемента
+function changeSlide(direction, n) { // функция появления следующего элемента
   isEnabled = false;
-  slides[currentSlide].classList.add(direction); // добавление в текущий элемент анимацию
-  slides[currentSlide].addEventListener('animationend', function () {
-    this.classList.remove('active_slide', direction); // после окончания анимации мы удалеяем классы active and direction
-  });
-}
-
-function showSlide(direction) { // функция появления следующего элемента
-  slides[currentSlide].classList.add('next', direction); //начало анимации на экране два слайда
-  slides[currentSlide].addEventListener('animationend', function () {
-    this.classList.remove('next', direction); // удаляем класс следующий, т.к. Анимация закончилась
-    this.classList.add('active_slide'); // объявляем след слайд актив
+  slider.classList.add(direction);
+  slides[currentSlide].classList.add('current'); //начало анимации на экране два слайда
+  console.log(currentSlide);
+  changeCurrentSlide(n + 1);
+  slides[currentSlide].classList.add('next'); //начало анимации на экране два слайда
+  slider.addEventListener('animationend', function () {
+    slider.classList.remove(direction); // удаляем класс следующий, т.к. Анимация закончилась
+    changeCurrentSlide(n);
+    slides[currentSlide].classList.remove('current'); // удаляем класс следующий, т.к. Анимация закончилась
+    slides[currentSlide].classList.remove('active_slide'); // удаляем класс следующий, т.к. Анимация закончилась
+    changeCurrentSlide(n + 1);
+    slides[currentSlide].classList.add('active_slide'); // объявляем след слайд актив
+    slides[currentSlide].classList.remove('next'); // объявляем след слайд актив
     isEnabled = true;
   });
+
 }
 
 function nextSlide(n) { //функция смены слайда право
-  hideSlide('to-left');
-  changeCurrentSlide(n + 1);
-  showSlide('from-right');
+  changeSlide('slider_right', n);
   if (n % 2 == 0) {
     document.querySelector('.main').classList.remove('red_slide');
     document.querySelector('.main').classList.add('blue_slide');
@@ -63,9 +66,7 @@ function nextSlide(n) { //функция смены слайда право
 }
 
 function previousSlide(n) { //функция смены слайда право
-  hideSlide('to-right');
-  changeCurrentSlide(n - 1);
-  showSlide('from-left');
+  changeSlide('slider_left', n);
   if (n % 2 == 0) {
     document.querySelector('.main').classList.remove('red_slide');
     document.querySelector('.main').classList.add('blue_slide');
