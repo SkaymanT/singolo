@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  width: 1020px;
+  max-width: 1020px;
   margin: 0 auto;
 }
 
@@ -76,6 +76,7 @@ nav li:first-child::before {
 
 }
 
+
 a.Active {
   color: #f06c64;
 }
@@ -112,6 +113,7 @@ main {
   left: 112px;
   margin: 0;
 }
+  
 .slider__images__image2 {
   position: absolute;
   top: 3px;
@@ -160,7 +162,7 @@ main {
   left: 485px;
   z-index: 2;
 }
-
+  
 .IPhone_horizontal_btn {
   position: absolute;
   top: 256.5px;
@@ -228,7 +230,7 @@ main {
   left: 612px;
   margin: 0 auto;
   z-index: 1;
-}
+
 
 .slider__prev {
   position: absolute;
