@@ -112,6 +112,7 @@ main {
   left: 112px;
   margin: 0;
 }
+
 .slider__images__image2 {
   position: absolute;
   top: 3px;
@@ -379,7 +380,8 @@ main {
   cursor: pointer;
   color: #f1f1f3;
 }
-.selected{
+
+.selected {
   border: 1px solid #f1f1f3;
   color: #f1f1f3;
 }
@@ -783,11 +785,11 @@ footer {
   opacity: 0.5;
 }
 
-.slider{
+.slider {
   position: relative;
 }
 
-.all_slider{
+.all_slider {
   position: relative;
 }
 
@@ -821,22 +823,24 @@ footer {
 
 @keyframes spincube_right {
   from {
-      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  }		
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+
   to {
-      transform: rotateY(-90deg);
-  }		
- 
+    transform: rotateY(-90deg);
+  }
+
 }
 
 @keyframes spincube_left {
   from {
-      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  }		
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+
   to {
-      transform: rotateY(90deg);
-  }		
- 
+    transform: rotateY(90deg);
+  }
+
 }
 
 .slider_right {
@@ -872,7 +876,7 @@ footer {
 }
 
 
-.portfolio_img{
+.portfolio_img {
   border: solid 5px transparent;
 }
 
@@ -885,7 +889,7 @@ footer {
 }
 
 
-#close-btn{
+#close-btn {
   font-family: 'LatoWeb', sans-serif;
   border: 1px solid #f0d8d9;
   background-color: #f0d8d9;
@@ -895,7 +899,7 @@ footer {
   height: 37px;
 }
 
-#close-btn:hover{
+#close-btn:hover {
   cursor: pointer;
   filter: alpha(Opacity=50);
   opacity: 0.5;
