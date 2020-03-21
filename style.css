@@ -3,10 +3,12 @@
   margin: 0;
 }
 
-body, html {
+body,
+html {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  scroll-padding-top: 95px;
 }
 
 .container {
@@ -934,3 +936,4 @@ footer {
   border-radius: 1%;
   background-color: #f2f2f2;
 }
+

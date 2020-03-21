@@ -37,18 +37,18 @@ function onScroll(event) {
   const curPos = window.scrollY;
   const divs = document.querySelectorAll('body>div');
   const links = document.querySelectorAll('#menu a');
+  const halfScreen = screen.height / 2;
+  //console.log(curPos);
 
   divs.forEach((el) => {
-    if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos){
-      links.forEach((a)=>{
+    if ((el.offsetTop + el.offsetHeight / 2) <= (curPos + halfScreen) && (el.offsetTop + el.offsetHeight) > (curPos + halfScreen)) {
+      links.forEach((a) => {
         a.classList.remove('Active');
-        if(el.getAttribute('id')== a.getAttribute('href').substring(1)){
+        if (el.getAttribute('id') == a.getAttribute('class').substring(5)) {
           a.classList.add('Active');
         }
-
       });
     }
-
   });
 
 }
