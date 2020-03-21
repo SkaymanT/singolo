@@ -1,6 +1,8 @@
 //---------- Header --------------
 let counter = 0;
 const MENU = document.getElementById('menu');
+
+
 //--- Slider. Переключение слайдов-------------
 let slider = document.getElementById('slider');
 let slides = document.querySelectorAll('.slide');
@@ -28,6 +30,28 @@ MENU.addEventListener('click', (event) => {
     event.target.classList.add('Active');
   }
 });
+
+document.addEventListener('scroll', onScroll);
+
+function onScroll(event) {
+  const curPos = window.scrollY;
+  const divs = document.querySelectorAll('body>div');
+  const links = document.querySelectorAll('#menu a');
+  const halfScreen = screen.height / 2;
+  //console.log(curPos);
+
+  divs.forEach((el) => {
+    if ((el.offsetTop + el.offsetHeight / 2) <= (curPos + halfScreen) && (el.offsetTop + el.offsetHeight) > (curPos + halfScreen)) {
+      links.forEach((a) => {
+        a.classList.remove('Active');
+        if (el.getAttribute('id') == a.getAttribute('class').substring(5)) {
+          a.classList.add('Active');
+        }
+      });
+    }
+  });
+
+}
 
 //--- Slider. Переключение слайдов-------------
 function changeCurrentSlide(n) { // функция изменяющая текущий слайд "карусель"
@@ -127,89 +151,89 @@ document.querySelector('.IPhone_vertical_body').addEventListener('click', functi
 
 
 const swipedetect = (el) => {
-  
-	let surface = el;
-	let startX = 0;
-	let startY = 0;
-	let distX = 0;
-	let distY = 0;
-	let startTime = 0;
-	let elapsedTime = 0;
 
-	let threshold = 150;
-	let restraint = 100;
-	let allowedTime = 300;
+  let surface = el;
+  let startX = 0;
+  let startY = 0;
+  let distX = 0;
+  let distY = 0;
+  let startTime = 0;
+  let elapsedTime = 0;
 
-	surface.addEventListener('mousedown', function(e){
-		startX = e.pageX;
-		startY = e.pageY;
-		startTime = new Date().getTime();
-		e.preventDefault();
-	}, false);
+  let threshold = 150;
+  let restraint = 100;
+  let allowedTime = 300;
 
-	surface.addEventListener('mouseup', function(e){
-		distX = e.pageX - startX;
-		distY = e.pageY - startY;
-		elapsedTime = new Date().getTime() - startTime;
-		if (elapsedTime <= allowedTime){
-			if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
-				if ((distX > 0)) {
-					if (isEnabled) {
-						previousSlide(currentSlide);
-					}
-				} else {
-					if (isEnabled) {
-						nextSlide(currentSlide);
-					}
-				}
-			}
-		}
-		e.preventDefault();
-	}, false);
+  surface.addEventListener('mousedown', function (e) {
+    startX = e.pageX;
+    startY = e.pageY;
+    startTime = new Date().getTime();
+    e.preventDefault();
+  }, false);
 
-	surface.addEventListener('touchstart', function(e){
-		if (e.target.classList.contains('arrow') || e.target.classList.contains('control')) {
-			if (e.target.classList.contains('left')) {
-				if (isEnabled) {
-					previousSlide(currentSlide);
-				}
-			} else {
-				if (isEnabled) {
-					nextSlide(currentSlide);
-				}
-			}
-		}
-			var touchobj = e.changedTouches[0];
-			startX = touchobj.pageX;
-			startY = touchobj.pageY;
-			startTime = new Date().getTime();
-			e.preventDefault();
-	}, false);
+  surface.addEventListener('mouseup', function (e) {
+    distX = e.pageX - startX;
+    distY = e.pageY - startY;
+    elapsedTime = new Date().getTime() - startTime;
+    if (elapsedTime <= allowedTime) {
+      if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+        if ((distX > 0)) {
+          if (isEnabled) {
+            previousSlide(currentSlide);
+          }
+        } else {
+          if (isEnabled) {
+            nextSlide(currentSlide);
+          }
+        }
+      }
+    }
+    e.preventDefault();
+  }, false);
 
-	surface.addEventListener('touchmove', function(e){
-			e.preventDefault();
-	}, false);
+  surface.addEventListener('touchstart', function (e) {
+    if (e.target.classList.contains('arrow') || e.target.classList.contains('control')) {
+      if (e.target.classList.contains('left')) {
+        if (isEnabled) {
+          previousSlide(currentSlide);
+        }
+      } else {
+        if (isEnabled) {
+          nextSlide(currentSlide);
+        }
+      }
+    }
+    var touchobj = e.changedTouches[0];
+    startX = touchobj.pageX;
+    startY = touchobj.pageY;
+    startTime = new Date().getTime();
+    e.preventDefault();
+  }, false);
 
-	surface.addEventListener('touchend', function(e){
-			var touchobj = e.changedTouches[0];
-			distX = touchobj.pageX - startX;
-			distY = touchobj.pageY - startY;
-			elapsedTime = new Date().getTime() - startTime;
-			if (elapsedTime <= allowedTime){
-					if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
-							if ((distX > 0)) {
-								if (isEnabled) {
-									previousSlide(currentSlide);
-								}
-							} else {
-								if (isEnabled) {
-									nextSlide(currentSlide);
-								}
-							}
-					}
-			}
-			e.preventDefault();
-	}, false);
+  surface.addEventListener('touchmove', function (e) {
+    e.preventDefault();
+  }, false);
+
+  surface.addEventListener('touchend', function (e) {
+    var touchobj = e.changedTouches[0];
+    distX = touchobj.pageX - startX;
+    distY = touchobj.pageY - startY;
+    elapsedTime = new Date().getTime() - startTime;
+    if (elapsedTime <= allowedTime) {
+      if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+        if ((distX > 0)) {
+          if (isEnabled) {
+            previousSlide(currentSlide);
+          }
+        } else {
+          if (isEnabled) {
+            nextSlide(currentSlide);
+          }
+        }
+      }
+    }
+    e.preventDefault();
+  }, false);
 }
 
 var el = document.querySelector('.slider');
