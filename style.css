@@ -12,7 +12,7 @@ html {
 }
 
 .container {
-  width: 1020px;
+  max-width: 1020px;
   margin: 0 auto;
 }
 
@@ -937,3 +937,14 @@ footer {
   background-color: #f2f2f2;
 }
 
+@media (max-width: 1020px){
+
+}
+
+@media (max-width: 768px){
+  
+}
+
+@media (max-width: 375px){
+  
+}
