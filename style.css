@@ -937,14 +937,44 @@ footer {
   background-color: #f2f2f2;
 }
 
-@media (max-width: 1020px){
+@media (max-width: 1020px) {
+
+  .main {
+    height: 58.23vw;
+  }
+  .IPhone_vertical_back {
+    top: 0px;
+    left: 0px;
+  }
+
+  .IPhone_vertical_back>img {
+    width: 23.53vw;
+  }
+  .IPhone_vertical_screen {
+    top: 6.38vw;
+    left: 1.43vw;
+  }
+
+  .IPhone_vertical_screen>img {
+    width: 18.43vw;
+  }
+
+  .IPhone_vertical_btn>img {
+    width: 4.1vw;
+  }
+
+  .IPhone_vertical_btn {
+    top: 39.9vw;
+    left: 8.57vw;
+  }
+
+  .slider__prev{
+    top: 27.58vw;
+    left: 3.83vw;
+  }
 
 }
 
-@media (max-width: 768px){
-  
-}
+@media (max-width: 768px) {}
 
-@media (max-width: 375px){
-  
-}
+@media (max-width: 375px) {}
