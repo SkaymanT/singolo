@@ -290,7 +290,6 @@ nav li a:hover {
   width: 300px;
   margin: 35px -7.8px -6px 1px;
   display: flex;
-  justify-content: space-between;
   overflow: hidden;
 }
 
@@ -1084,8 +1083,13 @@ footer {
     width: 24.9vw;
   }
 
-  .services__block{
+  .services{
+    height: 675px;
+  }
 
+  .services__blocks {
+    padding-right: calc((100% - 600px - 2.72vw)/2);
+    padding-left: calc((100% - 600px - 11.58vw)/2);
   }
 
 
