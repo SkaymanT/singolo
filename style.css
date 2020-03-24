@@ -1144,10 +1144,25 @@ footer {
     grid-row-gap: 12px;
   }
 
-
-
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+
+  .container {
+    width: 100vw;
+  }
+
+  .services{
+    height: 1032.6px;
+  }
+
+  .services__description {
+    padding: 27.6px 32px 0px 29px;
+  }
+  
+  .services__description p {
+    margin-top: 18px;
+  }
+}
 
 @media (max-width: 375px) {}
