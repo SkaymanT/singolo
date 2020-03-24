@@ -1017,11 +1017,11 @@ footer {
   }
 
   .slider_right .current {
-    transform: translateZ(50vw);
+    transform: translateZ(45vw);
   }
 
   .slider_right .next {
-    transform: rotateY(90deg) translateZ(510px);
+    transform: rotateY(90deg) translateZ(45vw);
   }
 
   .slider_left {
@@ -1033,11 +1033,11 @@ footer {
   }
 
   .slider_left .current {
-    transform: translateZ(50vw);
+    transform: translateZ(45vw);
   }
 
   .slider_left .next {
-    transform: rotateY(-90deg) translateZ(50vw);
+    transform: rotateY(-90deg) translateZ(45vw);
   }
 
   .slider__images__image3 {
