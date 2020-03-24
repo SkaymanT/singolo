@@ -951,6 +951,7 @@ footer {
   .IPhone_vertical_back>img {
     width: 23.53vw;
   }
+
   .IPhone_vertical_screen {
     top: 6.38vw;
     left: 1.3vw;
@@ -969,7 +970,7 @@ footer {
     left: 8.57vw;
   }
 
-  .slider__prev{
+  .slider__prev {
     top: 27.58vw;
     left: 3.83vw;
   }
@@ -982,6 +983,7 @@ footer {
   .IPhone_horizontal_back>img {
     height: 23.53vw;
   }
+
   .IPhone_horizontal_screen {
     top: 18.68vw;
     left: 47.46vw;
@@ -1000,10 +1002,86 @@ footer {
     left: 42.31vw;
   }
 
-  .slider__next{
+  .slider__next {
     top: 27.58vw;
     right: 3.5vw;
   }
+
+
+  .slider_right {
+    animation-name: spincube_right;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    transform-style: preserve-3d;
+    transform-origin: 50vw 29.41vw 0;
+  }
+
+  .slider_right .current {
+    transform: translateZ(50vw);
+  }
+
+  .slider_right .next {
+    transform: rotateY(90deg) translateZ(510px);
+  }
+
+  .slider_left {
+    animation-name: spincube_left;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    transform-style: preserve-3d;
+    transform-origin: 50vw 29.41vw 0;
+  }
+
+  .slider_left .current {
+    transform: translateZ(50vw);
+  }
+
+  .slider_left .next {
+    transform: rotateY(-90deg) translateZ(50vw);
+  }
+
+  .slider__images__image3 {
+    top: 14.9vw;
+    left: 24.69vw;
+  }
+
+  .slider__images__image3>img {
+    width: 15.29vw;
+  }
+
+  .slider__images__image4 {
+    top: 4.21vw;
+    left: 37.54vw;
+  }
+
+  .slider__images__image5 {
+    top: 14.9vw;
+    left: 60vw;
+  }
+
+  .slider__images__image5>img {
+    width: 15.29vw;
+  }
+
+  .IPhone_vertical_body>img {
+    width: 22.45vw;
+  }
+
+  .IPhone_vertical_display {
+    top: 6.76vw;
+    left: 1.37vw;
+  }
+
+  .IPhone_vertical_display>img {
+    width: 19.57vw;
+  }
+
+
+  .IPhone_vertical_shadow>img {
+    width: 24.9vw;
+  }
+
+
 
 }
 
