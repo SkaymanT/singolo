@@ -274,28 +274,30 @@ nav li a:hover {
   color: #767e9e;
   text-align: justify;
   margin-top: 15px;
-  overflow: hidden;
-  max-height: 64px;
 }
 
 .services__blocks {
   position: relative;
   display: inline-flex;
   flex-wrap: wrap;
-  padding-left: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  justify-content: space-between;
 }
 
 .services__block {
   position: relative;
-  width: 33%;
+  width: 300px;
   margin: 35px -7.8px -6px 1px;
   display: flex;
+  justify-content: space-between;
   overflow: hidden;
 }
 
 .services__block__icon {
   position: relative;
-  margin: 10px 10px 0px 10px;
+  left: -10px;
+  margin: 10px 0px 0px 10px;
 }
 
 .services__block__text {
@@ -303,7 +305,8 @@ nav li a:hover {
   max-width: 220px;
   color: #666d89;
   overflow: hidden;
-  max-height: 90px;
+  max-height: 97px;
+  max-width: 220px;
 }
 
 .services__block__text h3 {
@@ -1079,6 +1082,10 @@ footer {
 
   .IPhone_vertical_shadow>img {
     width: 24.9vw;
+  }
+
+  .services__block{
+
   }
 
 
