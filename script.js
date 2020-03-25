@@ -25,13 +25,11 @@ const CLOSE_BUTTON = document.getElementById('close-btn');
 
 //----------------------------------------------------------------------------------------
 //---------- Header --------------
-RESPOSIVE_MENU.addEventListener('click', (event) => {
+RESPOSIVE_MENU.addEventListener('click', () => {
   let head = document.querySelector('.header');
-  console.log(head.className.includes('open_menu'));
   if (!head.className.includes('open_menu')) {
     head.classList.add('open_menu');
-  }
-  else{
+  } else {
     head.classList.remove('open_menu');
   }
 });
@@ -53,7 +51,7 @@ function onScroll(event) {
   console.log(curPos);
 
   divs.forEach((el) => {
-    if (el.offsetTop  <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+    if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
       links.forEach((a) => {
         a.classList.remove('Active');
         if (el.getAttribute('id') == a.getAttribute('class').substring(5)) {
