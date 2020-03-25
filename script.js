@@ -38,10 +38,11 @@ function onScroll(event) {
   const divs = document.querySelectorAll('body>div');
   const links = document.querySelectorAll('#menu a');
   const halfScreen = screen.height / 2;
-  //console.log(curPos);
+  console.log(curPos);
 
   divs.forEach((el) => {
     if ((el.offsetTop + el.offsetHeight / 2) <= (curPos + halfScreen) && (el.offsetTop + el.offsetHeight) > (curPos + halfScreen)) {
+      offsetHeight
       links.forEach((a) => {
         a.classList.remove('Active');
         if (el.getAttribute('id') == a.getAttribute('class').substring(5)) {
