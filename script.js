@@ -1,6 +1,7 @@
 //---------- Header --------------
 let counter = 0;
 const MENU = document.getElementById('menu');
+let RESPOSIVE_MENU = document.getElementById('resposive_menu');
 
 
 //--- Slider. Переключение слайдов-------------
@@ -24,6 +25,17 @@ const CLOSE_BUTTON = document.getElementById('close-btn');
 
 //----------------------------------------------------------------------------------------
 //---------- Header --------------
+RESPOSIVE_MENU.addEventListener('click', (event) => {
+  let head = document.querySelector('.header');
+  console.log(head.className.includes('open_menu'));
+  if (!head.className.includes('open_menu')) {
+    head.classList.add('open_menu');
+  }
+  else{
+    head.classList.remove('open_menu');
+  }
+});
+
 MENU.addEventListener('click', (event) => {
   if (event.target.tagName != 'LI' && event.target.tagName != 'UL') {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('Active'));

@@ -29,7 +29,6 @@ header {
 .fas.fa-bars {
   display: none;
   color: #FFFFFF;
-  /* transform: rotateZ(90deg); */
 }
 
 #menu_responsive {
@@ -62,7 +61,7 @@ header {
 
 nav {
   float: right;
-  display: fle;
+  display: flex;
   padding: 15px 0px;
 }
 
@@ -203,7 +202,6 @@ nav li a:hover {
   top: 152px;
   left: 252px;
   margin: 0px;
-  height: 594px;
   z-index: 1;
 }
 
@@ -807,7 +805,7 @@ footer {
 }
 
 .slide {
-  position: relative;
+  /* position: relative; */
   display: none;
   margin: 0 auto;
 }
@@ -953,7 +951,8 @@ footer {
     width: 100vw;
   }
 
-  .main {
+  .main,
+  .slide {
     height: 58.23vw;
   }
 
@@ -1169,33 +1168,76 @@ footer {
     height: 71px;
   }
 
+  .header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding-top: 24px;
+  }
+
   .logo {
     width: 92px;
     height: 24px;
+    margin-left: calc((100vw - 92px)/2);
+    padding: 0;
   }
 
   .logo h1 {
-    width: 92px;
-    height: 24px;
+    padding: 0;
     font-size: 19.6875px;
-    padding: 24px 36vw 0px 39.46vw;
   }
 
-  .menu_side {
+  nav {
+    padding: 0;
+    padding-left: 20px;
+  }
+
+  nav i {
+    font-size: 17pt;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .fas.fa-bars {
+    display: block;
+  }
+
+  .open_menu {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 74vw;
+    width: 275px;
     height: 100vh;
     background-color: #2d303a;
-  
   }
 
-  nav ul {
-    margin-top: 202px;
+  .open_menu>nav>i {
+    position: absolute;
+    padding-left: 2.5px;
+    font-size: 17pt;
+    transform: rotate(90deg);
+  }
 
+  .open_menu>.logo {
+    position: absolute;
+    margin-left: 71px;
+  }
+
+  .open_menu>nav>ul {
+    display: block;
     display: flex;
+    margin: 212px 0 0 51px;
+    padding: 0;
     flex-direction: column;
+  }
+
+  .open_menu>nav>ul>li {
+    padding: 0 0 27px 0;
+  }
+
+  .open_menu>nav>ul>li>a {
+    font-size: 24px;
+    line-height: 29px;
   }
 
   nav li::before {
