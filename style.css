@@ -1164,6 +1164,11 @@ footer {
     width: 100vw;
   }
 
+  body,
+  html {
+    scroll-padding-top: 71px;
+  }
+
   header {
     height: 71px;
   }
@@ -1244,6 +1249,11 @@ footer {
     display: none;
   }
 
+  .main{
+    height: 58.23vw;
+  }
+ 
+
 
   .services {
     height: 1032.6px;
@@ -1256,6 +1266,12 @@ footer {
   .services__description p {
     margin-top: 18px;
   }
+
+  .services__blocks{
+    flex: 1 0 50%;
+  }
+
+
 }
 
 @media (max-width: 375px) {}

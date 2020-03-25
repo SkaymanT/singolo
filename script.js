@@ -3,7 +3,6 @@ let counter = 0;
 const MENU = document.getElementById('menu');
 let RESPOSIVE_MENU = document.getElementById('resposive_menu');
 
-
 //--- Slider. Переключение слайдов-------------
 let slider = document.getElementById('slider');
 let slides = document.querySelectorAll('.slide');
