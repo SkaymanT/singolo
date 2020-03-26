@@ -415,6 +415,8 @@ nav li a:hover {
 
 .portofolio__tags {
   padding: 0;
+  margin-top: 13px;
+  margin-bottom: 14px;
 }
 
 .about-us {
@@ -1169,20 +1171,20 @@ footer {
   }
 
   header {
-    height: 71px;
+    height: 66px;
   }
 
   .header {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
-    padding-top: 24px;
+    padding-top: 26px;
   }
 
   .logo {
     width: 92px;
     height: 24px;
-    margin-left: calc((100vw - 92px)/2);
+    margin-left: calc((100vw - 165px)/2);
     padding: 0;
   }
 
@@ -1197,7 +1199,7 @@ footer {
   }
 
   nav i {
-    font-size: 17pt;
+    font-size: 19pt;
   }
 
   .navigation {
@@ -1249,13 +1251,37 @@ footer {
   }
 
   .main {
-    height: 58.23vw;
+    height: calc(58.23vw - 5px);
+  }
+
+  .slider__prev {
+    top: 26.55vw;
+    left: 2.66vw;
+
+  }
+
+  .slider__prev>img {
+    width: 14px;
+  }
+
+  .slider__next {
+    top: 26.55vw;
+    right: 2.56vw;
+  }
+
+  .slider__images__image1 {
+    top: 5.13vw;
+    left: 11vw;
   }
 
 
+  .slider__images__image2 {
+    top: 0vw;
+    left: 0vw;
+  }
 
   .services {
-    height: 1032.6px;
+    height: 1027.6px;
   }
 
   .services__description {
@@ -1264,24 +1290,42 @@ footer {
 
   .services__description p {
     margin-top: 18px;
-
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0px;
+    text-align: left;
   }
 
   .services__blocks {
     left: calc((100vw - 300px)*32/75);
     width: 300px;
     padding: 0;
-    margin-top: 10px;
+    margin-top: 0px;
   }
 
   .services__block {
     margin: 0;
-    margin-top: 15px;
+    margin-top: 20px;
     flex: 1 0 100%;
+
+  }
+
+  .services__block__icon {
+    top: 0;
+    margin-top: 5px;
+  }
+
+  .services__block__text {
+    margin-top: 5px;
+  }
+
+  .services__block p {
+    font-size: 12px;
+    line-height: 22px;
   }
 
   .portofolio {
-    height: 225vw;
+    height: calc(225vw - 5px);
   }
 
   .portfolio__description {
@@ -1290,7 +1334,7 @@ footer {
   }
 
   .portfolio__description>h3 {
-    padding-top: 42px;
+    padding-top: 44px;
     font-size: 30px;
     line-height: 36px;
   }
@@ -1298,6 +1342,11 @@ footer {
   .portfolio__description>p {
     font-size: 18px;
     line-height: 30px;
+  }
+
+  .portofolio__tags {
+    margin-top: 13px;
+    margin-bottom: 18px;
   }
 
   .tag {
@@ -1310,14 +1359,14 @@ footer {
     grid-template-rows: auto auto auto auto;
     grid-column-gap: 0.8vw;
     grid-row-gap: 1.06vw;
-    padding-left: 8vw;
-    padding-right: 8vw;
-    max-height: 146.1vw;
+    padding-left: calc(8vw - 5px);
+    padding-right: calc(8vw - 5px);
+    max-height: 149.06vw;
     margin: 0;
   }
 
   .layout-4-column>img {
-    width: calc((83.24vw - 20px)/2);
+    width: calc((83.24vw - 10px)/2);
   }
 
   .about-us {
@@ -1368,7 +1417,7 @@ footer {
     height: 50px;
   }
 
-  .footer_content{
+  .footer_content {
     padding: 0;
     margin: 0;
   }
