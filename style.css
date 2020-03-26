@@ -1370,20 +1370,57 @@ footer {
   }
 
   .about-us {
-    width: 100%;
-    height: 467vw;
+    width: 84vw;
+    height: calc(467vw - 5px);
+    padding-left: 8vw;
+    padding-right: 8vw;
   }
+
+  .about-us__description {
+    padding: 0;
+    width: 84vw;
+  }
+
+
+  .about-us__description h2 {
+    padding: 0;
+    padding-top: 33px;
+  }
+
+  .about-us__description p {
+    padding: 0;
+    padding-top: 20px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.35px;
+  }
+
 
   .layout-3-column {
     grid-template-columns: auto;
+    padding: 0;
+    padding-top: 20px;
   }
 
   .employer {
-    width: 80vw;
+    width: 84vw;
   }
 
   .employer>img {
-    width: 80vw;
+    width: 84vw;
+  }
+  
+  .employer__content p {
+    padding-top: 0;
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  .social {
+    padding: 0;
+    padding-top: 0px;
+    margin-bottom: 30px;
   }
 
   .get-a-quota {
