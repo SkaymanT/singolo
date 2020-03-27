@@ -639,7 +639,7 @@ form textarea {
   letter-spacing: -0.35px;
 }
 
-.get-a-quota__content>p {
+.get-a-quota__content p {
   padding-top: 8px;
   font-family: 'LatoWebLight', sans-serif;
   font-size: 9pt;
@@ -1144,17 +1144,16 @@ footer {
     height: calc(93.1vw + 380px);
   }
 
-  .portfolio__description p{
+  .portfolio__description p {
     padding-top: 15px;
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 0px;
   }
 
-  .portofolio__tags{
+  .portofolio__tags {
     margin-top: 10px;
   }
-
 
   .layout-4-column {
     margin-top: 8px;
@@ -1171,9 +1170,25 @@ footer {
     width: calc((100vw - 120px)/3);
   }
 
+  .about-us {
+    height: calc(87.1vw - 8px);
+  }
+
+  .about-us__description>h2 {
+    padding-top: 52px;
+  }
+
+  .about-us__description>p {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0px;
+    padding-bottom: 0;
+  }
+
   .layout-3-column {
+    padding-top: 37px;
+    padding-left: 42px;
     grid-column-gap: calc((14.41vw - 80px)/2);
-    ;
   }
 
   .employer {
@@ -1184,26 +1199,58 @@ footer {
     width: 28.52vw;
   }
 
+  .employer__content>h5 {
+    padding-top: 7px;
+  }
+
+  .employer__content>p {
+    padding-top: 2px;
+  }
+
+  .social {
+    padding: 0;
+    margin: 0;
+  }
+
   .get-a-quota {
     height: 625px;
   }
 
+  .get-a-quota__description h5 {
+    padding-top: 55px;
+  }
+
+  .get-a-quota__description p {
+    padding-top: 17px;
+  }
+
+
   .layout-2-column {
-    padding-top: 19px;
+    padding-top: 23px;
+    padding-left: 39px;
     grid-template-columns: 57.55vw 28.77vw;
     grid-column-gap: 29px;
   }
 
-  .get-a-quota__description h5 {
-    padding-top: 53px;
-  }
-
-  .get-a-quota__description p {
-    padding-top: 12px;
-  }
-
   form {
     grid-row-gap: 12px;
+    grid-template-rows: 38px 38px 38px 159px;
+  }
+
+  .get-a-quota__form button {
+    margin-top: 5px;
+    width: 136px;
+    height: 38px;
+  }
+
+  .get-a-quota__content p {
+    padding: 0;
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  .contact {
+    padding-top: 9px;
   }
 
 }
@@ -1373,7 +1420,7 @@ footer {
   }
 
   .portofolio {
-    height: calc(150vw + 275.25px);
+    height: calc(150vw + 277.5px);
   }
 
   .portfolio__description {
@@ -1403,6 +1450,7 @@ footer {
   }
 
   .layout-4-column {
+    padding-top: 5px;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto auto;
     grid-column-gap: 0.8vw;
@@ -1459,6 +1507,10 @@ footer {
     width: 84vw;
   }
 
+  .employer__content {
+    padding-top: 5px;
+  }
+
   .employer__content p {
     padding-top: 0;
     font-size: 12px;
@@ -1482,7 +1534,7 @@ footer {
   }
 
   .get-a-quota__description h5 {
-    padding-top: 44px;
+    padding-top: 46px;
   }
 
   .get-a-quota__description p {
@@ -1514,16 +1566,17 @@ footer {
   }
 
   .get-a-quota__form button {
+    margin: 0;
     width: 84vw;
     height: 50px;
   }
 
   .contact {
-    padding-top: 8px;
+    padding-top: 5px;
   }
 
   .contact p {
-    padding-top: 10px;
+    padding-top: 5px;
   }
 
   .footer_content {
