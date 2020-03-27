@@ -587,7 +587,6 @@ form {
   display: grid;
   grid-template-rows: 38px 38px 38px 202px;
   grid-row-gap: 16px;
-
 }
 
 input::-webkit-input-placeholder {
@@ -1410,7 +1409,7 @@ footer {
   .employer>img {
     width: 84vw;
   }
-  
+
   .employer__content p {
     padding-top: 0;
     font-size: 12px;
@@ -1424,34 +1423,58 @@ footer {
   }
 
   .get-a-quota {
-    height: 258.4vw;
+    height: calc(258.4vw - 5px);
+  }
+
+  .get-a-quota__description {
+    padding: 0;
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+
+  .get-a-quota__description h5 {
+    padding-top: 44px;
+  }
+
+  .get-a-quota__description p {
+    padding-top: 18px;
+    text-align: left;
+    letter-spacing: 0px;
   }
 
   .layout-2-column {
-    padding-top: 19px;
+    padding: 19px 8vw 0vw 8vw;
     grid-template-columns: auto;
     grid-column-gap: 29px;
   }
 
-  .get-a-quota__description h5 {
-    padding-top: 53px;
-  }
-
-  .get-a-quota__description p {
-    padding-top: 12px;
-  }
-
   form {
     grid-row-gap: 12px;
+    grid-template-rows: 38px 38px 38px 162px;
   }
 
   .get-a-quota__content {
-    margin-top: 20px;
+    margin-top: 32px;
+  }
+
+  .get-a-quota__content>p {
+    padding-top: 0px;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: justify;
   }
 
   .get-a-quota__form button {
-    width: 80vw;
+    width: 84vw;
     height: 50px;
+  }
+
+  .contact{
+    padding-top: 8px;
+  }
+
+  .contact p {
+    padding-top: 10px;
   }
 
   .footer_content {
