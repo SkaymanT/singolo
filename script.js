@@ -1,7 +1,7 @@
 //---------- Header --------------
 let counter = 0;
 const MENU = document.getElementById('menu');
-
+let RESPOSIVE_MENU = document.getElementById('resposive_menu');
 
 //--- Slider. Переключение слайдов-------------
 let slider = document.getElementById('slider');
@@ -24,6 +24,15 @@ const CLOSE_BUTTON = document.getElementById('close-btn');
 
 //----------------------------------------------------------------------------------------
 //---------- Header --------------
+RESPOSIVE_MENU.addEventListener('click', () => {
+  let head = document.querySelector('.header');
+  if (!head.className.includes('open_menu')) {
+    head.classList.add('open_menu');
+  } else {
+    head.classList.remove('open_menu');
+  }
+});
+
 MENU.addEventListener('click', (event) => {
   if (event.target.tagName != 'LI' && event.target.tagName != 'UL') {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('Active'));
@@ -34,14 +43,14 @@ MENU.addEventListener('click', (event) => {
 document.addEventListener('scroll', onScroll);
 
 function onScroll(event) {
-  const curPos = window.scrollY;
+  const nav = document.querySelector('header').offsetHeight;
+  const curPos = window.scrollY + nav;
   const divs = document.querySelectorAll('body>div');
   const links = document.querySelectorAll('#menu a');
-  const halfScreen = screen.height / 2;
-  //console.log(curPos);
-
+  console.log(curPos);
   divs.forEach((el) => {
-    if ((el.offsetTop + el.offsetHeight / 2) <= (curPos + halfScreen) && (el.offsetTop + el.offsetHeight) > (curPos + halfScreen)) {
+    if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+
       links.forEach((a) => {
         a.classList.remove('Active');
         if (el.getAttribute('id') == a.getAttribute('class').substring(5)) {

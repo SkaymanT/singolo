@@ -8,26 +8,30 @@
   <meta name="keywords" content="Ключевые слова" />
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://kit.fontawesome.com/795d58ac5c.js" crossorigin="anonymous"></script>
   <title>Singolo</title>
 </head>
 
 <body>
   <header>
     <div class="container">
-      <div class="logo">
-        <a href="">
-          <h1>Singolo</h1>
-        </a>
+      <div class="header">
+        <div class="logo">
+          <a href="">
+            <h1>Singolo</h1>
+          </a>
+        </div>
+        <nav>
+          <i class="fas fa-bars" id="resposive_menu"></i>
+          <ul class="navigation" id="menu">
+            <li><a class="menu-home Active" href="#home">home</a></li>
+            <li><a class='menu-services' href="#services">services</a></li>
+            <li><a class='menu-portfolio' href="#portfolio">portfolio</a></li>
+            <li><a class='menu-about' href="#about">about</a></li>
+            <li><a class='menu-contact' href="#contact">contact</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav>
-        <ul class="navigation" id="menu">
-          <li><a class="menu-home Active" href="#home">home</a></li>
-          <li><a class='menu-services' href="#services">services</a></li>
-          <li><a class='menu-portfolio' href="#portfolio">portfolio</a></li>
-          <li><a class='menu-about' href="#about">about</a></li>
-          <li><a class='menu-contact' href="#contact">contact</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
   <div class="main" id="home">
@@ -135,7 +139,7 @@
           <div class="services__block__text">
             <h3>Responsive Layout</h3>
             <p class="services__block__text_transfer">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas
-              blandit nunc ligula. Prae-<br>sent elit leo</p>
+              blandit nunc ligula. Praesent elit leo.</p>
           </div>
         </div>
         <div class="services__block">
@@ -145,7 +149,7 @@
           <div class="services__block__text">
             <h3>24/7 Support</h3>
             <p class="services__block__text_transfer">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla
-              a sem erat. Pellen-<br> tesque egestas venenatis lorem .</p>
+              a sem erat. Pellen tesque egestas venenatis lorem .</p>
           </div>
         </div>
         <div class="services__block">
@@ -289,17 +293,9 @@
             <button type="button" id="btn">Submit</button>
           </form>
         </div>
-        <div id="message-block" class="hidden">
-          <div id="message">
-            <p>Письмо отправлено <span id="result"></span></p>
-            <br>
-            <button id="close-btn">OK</button>
-
-          </div>
-        </div>
         <div class="get-a-quota__content">
           <h5>Contact Information</h5>
-          <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver-<br> ra nibh. Fusce vitae aliquam tellus. Proin
+          <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin
             sit
             amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
           </p>
@@ -330,7 +326,14 @@
             </p>
           </div>
         </div>
+      </div>
+      <div id="message-block" class="hidden">
+        <div id="message">
+          <p>Письмо отправлено <span id="result"></span></p>
+          <br>
+          <button id="close-btn">OK</button>
 
+        </div>
       </div>
 
     </div>
