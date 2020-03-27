@@ -950,6 +950,10 @@ footer {
     width: 100vw;
   }
 
+  nav {
+    padding-top: 13px;
+  }
+
   .main,
   .slide {
     height: 58.23vw;
@@ -957,7 +961,12 @@ footer {
 
   .slider__images__image1 {
     top: 5.33vw;
-    left: 12.21vw;
+    left: 11vw;
+  }
+
+  .slider__images__image2 {
+    top: 0vw;
+    left: 0vw;
   }
 
   .IPhone_vertical_back>img {
@@ -966,7 +975,7 @@ footer {
 
   .IPhone_vertical_screen {
     top: 6.38vw;
-    left: 1.3vw;
+    left: 1.35vw;
   }
 
   .IPhone_vertical_screen>img {
@@ -1088,22 +1097,62 @@ footer {
     width: 19.57vw;
   }
 
-
   .IPhone_vertical_shadow>img {
     width: 24.9vw;
   }
 
+
+
   .services {
-    height: 675px;
+    height: 670px;
+  }
+
+  .services__description {
+    padding-top: 39.62px;
   }
 
   .services__blocks {
+    padding: 0;
+    margin-top: -10px;
     padding-right: calc((100% - 300px - 41.72vw)/2);
     padding-left: calc((100% - 300px - 50.58vw)/2);
   }
 
+
+  .services__block {
+    margin: 0;
+    margin-top: 48px;
+  }
+
+  .services__block__icon {
+    top: 0;
+    margin-top: 0px;
+  }
+
+  .services__block__text {
+    margin-top: 0px;
+  }
+
+  .services__block p {
+    padding: 0;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0px;
+  }
+
   .portofolio {
     height: calc(93.1vw + 380px);
+  }
+
+  .portfolio__description p{
+    padding-top: 15px;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0px;
+  }
+
+  .portofolio__tags{
+    margin-top: 10px;
   }
 
   .layout-4-column {
@@ -1305,7 +1354,6 @@ footer {
     margin: 0;
     margin-top: 20px;
     flex: 1 0 100%;
-
   }
 
   .services__block__icon {
