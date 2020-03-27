@@ -1309,7 +1309,7 @@ footer {
   .open_menu {
     position: fixed;
     width: 275px;
-    height: 100vh;
+    height: calc(100vh + 90px);
     background-color: #2d303a;
   }
 

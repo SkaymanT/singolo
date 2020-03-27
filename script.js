@@ -47,7 +47,6 @@ function onScroll(event) {
   const curPos = window.scrollY + nav;
   const divs = document.querySelectorAll('body>div');
   const links = document.querySelectorAll('#menu a');
-  console.log(curPos);
   divs.forEach((el) => {
     if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
 
