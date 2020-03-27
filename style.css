@@ -1155,12 +1155,14 @@ footer {
     margin-top: 10px;
   }
 
+
   .layout-4-column {
+    margin-top: 8px;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto auto;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    padding-left: 40px;
+    padding-left: 34px;
     padding-right: 40px;
     max-height: 1095px;
   }
