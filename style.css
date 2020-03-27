@@ -18,8 +18,8 @@ html {
 
 header {
   position: sticky;
-  z-index: 100;
-  top: 0px;
+  z-index: 1000;
+  top: 0;
   background-color: #2d303a;
   width: 100%;
   height: 89px;
@@ -947,7 +947,8 @@ footer {
 @media (max-width: 1020px) {
 
   .container {
-    width: 100vw;
+    width: 100%;
+    margin: 0 auto;
   }
 
   nav {
@@ -1100,8 +1101,6 @@ footer {
   .IPhone_vertical_shadow>img {
     width: 24.9vw;
   }
-
-
 
   .services {
     height: 670px;
@@ -1258,7 +1257,8 @@ footer {
 @media (max-width: 767px) {
 
   .container {
-    width: 100vw;
+    width: 100%;
+    margin: 0 auto;
   }
 
   body,
