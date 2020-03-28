@@ -1,7 +1,7 @@
 //---------- Header --------------
 let counter = 0;
 const MENU = document.getElementById('menu');
-let RESPOSIVE_MENU = document.getElementById('resposive_menu');
+let RESPONSIVE_MENU = document.getElementById('resposive_menu');
 
 //--- Slider. Переключение слайдов-------------
 let slider = document.getElementById('slider');
@@ -24,7 +24,9 @@ const CLOSE_BUTTON = document.getElementById('close-btn');
 
 //----------------------------------------------------------------------------------------
 //---------- Header --------------
-RESPOSIVE_MENU.addEventListener('click', () => {
+
+//--- Header. Бокового меню------
+RESPONSIVE_MENU.addEventListener('click', () => {
   let head = document.querySelector('.header');
   if (!head.className.includes('open_menu')) {
     head.classList.add('open_menu');
@@ -252,22 +254,26 @@ TAG.addEventListener('click', (event) => {
   if (event.target.id != 'tag') {
     TAG.querySelectorAll('span').forEach(el => el.classList.remove('selected'));
     event.target.classList.add('selected');
-    IMAGE.querySelectorAll('img').forEach(el => el.classList.remove('active_img'));
+    //IMAGE.querySelectorAll('img').forEach(el => el.classList.remove('active_img')); 
     let IMGS = document.getElementById('image').querySelectorAll('img');
     for (let i = IMGS.length - 2; i >= 0; i--) {
+      console.log(IMGS[i]);
       i = (i ^ 2) % IMGS.length;
       IMAGE.appendChild(IMGS[i]);
     }
   }
-
 });
-
-
 
 //---- Portfolio. Взаимодействие с картинками---
 IMAGE.addEventListener('click', (event) => {
-  IMAGE.querySelectorAll('img').forEach(el => el.classList.remove('active_img'));
-  event.target.classList.add('active_img');
+  if (event.target.tagName == 'IMG') {
+    if (event.target.className.includes('active_img')) {
+      event.target.classList.remove('active_img');
+    } else {
+      IMAGE.querySelectorAll('img').forEach(el => el.classList.remove('active_img'));
+      event.target.classList.add('active_img');
+    }
+  }
 });
 
 
