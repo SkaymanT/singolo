@@ -861,12 +861,12 @@ footer {
   transform-origin: 510px 300px 0;
 }
 
-.slider_right .current {
+.slider_right .current { /* сокрытие текущего элемента*/
   transform: translateZ(510px);
 }
 
 .slider_right .next {
-  transform: rotateY(90deg) translateZ(510px);
+  transform: rotateY(90deg) translateZ(510px);/* открытие следующего элемента*/
 }
 
 .slider_left {
@@ -916,10 +916,10 @@ footer {
 }
 
 #message-block {
-  position: absolute;
+  position: fixed;
   width: 100vw;
-  height: 854px;
-  top: 2599px;
+  height: 100vh;
+  top: 0;
   left: 0;
   background-color: #0008;
 }
@@ -929,19 +929,21 @@ footer {
 }
 
 #message {
-  position: absolute;
+  position: fixed;
+  z-index: 1000;
   font-family: 'LatoWebSemibold', sans-serif;
   font-size: 19pt;
   color: #d6564f;
-  top: 50%;
-  left: 45%;
+  top: 40%;
+  left: calc((100% - 300px)/2);
   padding: 2vw 3vw;
-  max-width: 50vw;
-  max-height: 20vw;
+  max-width: 300px;
+  max-height: 200px;
   text-align: center;
   border: 2px solid #f0d8d9;
   border-radius: 1%;
   background-color: #f2f2f2;
+  overflow: scroll;
 }
 
 @media (max-width: 1020px) {
@@ -1306,12 +1308,44 @@ footer {
     display: block;
   }
 
+  @keyframes open-menu {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+
+  }
+
+  @keyframes close-menu {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+
+  }
+
   .open_menu {
     position: fixed;
     width: 275px;
     height: calc(100vh + 90px);
     background-color: #2d303a;
+    animation-name: open-menu;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.3s;
   }
+
+ 
+  .open_menu.close{
+    animation-name: close-menu;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.3s;
+  } 
 
   .open_menu>nav>i {
     position: absolute;
@@ -1467,7 +1501,7 @@ footer {
 
   .about-us {
     width: 84vw;
-    height: calc(994px + 200vw);
+    height: calc(956.5px + 210vw);
     padding-left: 8vw;
     padding-right: 8vw;
   }
