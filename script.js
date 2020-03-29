@@ -3,6 +3,7 @@ let counter = 0;
 const MENU = document.getElementById('menu');
 let RESPONSIVE_MENU = document.getElementById('resposive_menu');
 
+
 //--- Slider. Переключение слайдов-------------
 let slider = document.getElementById('slider');
 let slides = document.querySelectorAll('.slide');
@@ -73,7 +74,6 @@ MENU.addEventListener('click', (event) => {
   }
 });
 
-
 document.addEventListener('scroll', onScroll);
 
 function onScroll(event) {
@@ -83,6 +83,7 @@ function onScroll(event) {
   const links = document.querySelectorAll('#menu a');
   divs.forEach((el) => {
     if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+
 
       links.forEach((a) => {
         a.classList.remove('Active');
