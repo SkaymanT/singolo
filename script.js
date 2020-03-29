@@ -26,21 +26,53 @@ const CLOSE_BUTTON = document.getElementById('close-btn');
 //---------- Header --------------
 
 //--- Header. Бокового меню------
+// RESPONSIVE_MENU.addEventListener('click', () => {
+//   let head = document.querySelector('.header');
+//   if (!head.className.includes('open_menu')) {
+//     head.classList.add('open_menu');
+//   } else {
+//     head.classList.remove('open_menu');
+//   }
+// });
+
 RESPONSIVE_MENU.addEventListener('click', () => {
   let head = document.querySelector('.header');
   if (!head.className.includes('open_menu')) {
     head.classList.add('open_menu');
+    head.addEventListener('animationend', function () {
+      if (!head.className.includes('open_menu')) {
+        head.classList.add('open_menu');
+      }
+    });
   } else {
-    head.classList.remove('open_menu');
+    head.classList.add('close');
+    head.addEventListener('animationend', function () {
+      if (head.className.includes('open_menu')) {
+        head.classList.remove('open_menu');
+        head.classList.remove('close');
+      }
+    });
   }
 });
 
+
+
 MENU.addEventListener('click', (event) => {
   if (event.target.tagName != 'LI' && event.target.tagName != 'UL') {
+    let head = document.querySelector('.header');
+    console.log(head);
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('Active'));
     event.target.classList.add('Active');
+    head.classList.add('close');
+    head.addEventListener('animationend', function () {
+      if (head.className.includes('open_menu')) {
+        head.classList.remove('open_menu');
+        head.classList.remove('close');
+      }
+    });
   }
 });
+
 
 document.addEventListener('scroll', onScroll);
 
@@ -72,7 +104,6 @@ function changeSlide(direction, n) { // функция появления сле
   isEnabled = false;
   slider.classList.add(direction);
   slides[currentSlide].classList.add('current'); //начало анимации на экране два слайда
-  console.log(currentSlide);
   changeCurrentSlide(n + 1);
   slides[currentSlide].classList.add('next'); //начало анимации на экране два слайда
   slider.addEventListener('animationend', function () {
@@ -135,6 +166,18 @@ document.querySelector('.IPhone_vertical_btn').addEventListener('click', functio
   }
 });
 
+document.querySelector('.IPhone_vertical_btn').addEventListener('touchstart', function (e) {
+  if (vertical_btn % 2 == 0) {
+    document.querySelector('.IPhone_vertical_screen').classList.remove('on');
+    document.querySelector('.IPhone_vertical_screen').classList.add('off');
+    vertical_btn++;
+  } else {
+    document.querySelector('.IPhone_vertical_screen').classList.remove('off');
+    document.querySelector('.IPhone_vertical_screen').classList.add('on');
+    vertical_btn++;
+  }
+});
+
 document.querySelector('.IPhone_horizontal_btn').addEventListener('click', function () {
   if (horizontal_btn % 2 == 0) {
     document.querySelector('.IPhone_horizontal_screen').classList.remove('on');
@@ -147,7 +190,31 @@ document.querySelector('.IPhone_horizontal_btn').addEventListener('click', funct
   }
 });
 
+document.querySelector('.IPhone_horizontal_btn').addEventListener('touchstart', function () {
+  if (horizontal_btn % 2 == 0) {
+    document.querySelector('.IPhone_horizontal_screen').classList.remove('on');
+    document.querySelector('.IPhone_horizontal_screen').classList.add('off');
+    horizontal_btn++;
+  } else {
+    document.querySelector('.IPhone_horizontal_screen').classList.remove('off');
+    document.querySelector('.IPhone_horizontal_screen').classList.add('on');
+    horizontal_btn++;
+  }
+});
+
 document.querySelector('.IPhone_vertical_body').addEventListener('click', function () {
+  if (verticalv2_btn % 2 == 0) {
+    document.querySelector('.IPhone_vertical_display').classList.remove('on');
+    document.querySelector('.IPhone_vertical_display').classList.add('off');
+    verticalv2_btn++;
+  } else {
+    document.querySelector('.IPhone_vertical_display').classList.remove('off');
+    document.querySelector('.IPhone_vertical_display').classList.add('on');
+    verticalv2_btn++;
+  }
+});
+
+document.querySelector('.IPhone_vertical_body').addEventListener('touchstart', function () {
   if (verticalv2_btn % 2 == 0) {
     document.querySelector('.IPhone_vertical_display').classList.remove('on');
     document.querySelector('.IPhone_vertical_display').classList.add('off');
@@ -278,8 +345,8 @@ IMAGE.addEventListener('click', (event) => {
 
 
 // ----- Get a quote -------------
-
-BUTTON.addEventListener('click', () => {
+BUTTON.addEventListener('click', (event) => {
+  event.preventDefault();
   let name = document.getElementById('name');
   let email = document.getElementById('email');
   let subject = document.getElementById('subject').value;
